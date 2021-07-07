@@ -41,8 +41,22 @@ public class BankAccountTest {
         assertEquals(1200, account.getBalance(), 0);
     }
 
-    @org.junit.Test
-    v
+    @org.junit.AfterClass
+    public static void afterClass(){
+        System.out.println("This executes after any test casess. Count = " + count ++ );
+    }
+
+    @org.junit.After
+    public void teardown(){
+        System.out.println("Count = " + count ++);
+    }
+
+
+
+
+
+
+
 
 
 
