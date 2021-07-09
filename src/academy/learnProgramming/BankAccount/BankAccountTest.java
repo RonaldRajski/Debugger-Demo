@@ -1,7 +1,6 @@
 package academy.learnProgramming.BankAccount;
 
 import static junit.framework.TestCase.assertEquals;
-import static junit.framework.TestCase.fail;
 
 public class BankAccountTest {
 
@@ -35,12 +34,8 @@ private BankAccount account;
     @org.junit.Test(expected = IllegalArgumentException.class)
     public void withdraw_notBranch() throws Exception {
         double balance = account.withdraw(600.00, false);
-        fail("Should have thrown an IllegalArgumentException")
-//        assertEquals(400.00, balance, 0);
+        assertEquals(400.00, balance, 0);
     }
-    catch(IllegalArgumentException e){
-    }
-
 
 
     @org.junit.Test
